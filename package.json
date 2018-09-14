@@ -7,7 +7,8 @@
     "test": "jest",
     "android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android",
     "lint": "tslint 'src/**/*.{ts,tsx}'",
-    "pretty": "prettier --config prettier.config.js --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.css\""
+    "pretty": "prettier --config prettier.config.js --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.css\"",
+    "pretty-ci": "prettier --config prettier.config.js --list-different \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.css\""
   },
   "dependencies": {
     "react": "16.4.1",

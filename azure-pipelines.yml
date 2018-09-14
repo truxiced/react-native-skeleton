@@ -14,6 +14,6 @@ steps:
 
 - script: |
     npm install
-    npm run pretty
+    npm run pretty-ci
     npm run lint
   displayName: 'npm install and pretty'

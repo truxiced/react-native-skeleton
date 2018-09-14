@@ -95,6 +95,10 @@ const ContactNavigator = createStackNavigator(
     },
 );
 
+
+
+
+
 const AboutNavigator = createStackNavigator(
     {
         Contact: { screen: About },
@@ -147,7 +151,6 @@ const MainNavigator = createDrawerNavigator(
                     <Icon name="home" type="font-awesome" size={24} color={tintColor} />
                 ),
             },
-            
         },
         About: {
             screen: AboutNavigator,
@@ -181,12 +184,11 @@ const MainNavigator = createDrawerNavigator(
         },
     },
     {
-
         drawerBackgroundColor: colors.MenuBackground,
         contentComponent: CustomDrawerContentComponent,
         contentOptions: {
-            inactiveTintColor: colors.MenuText
-        }
+            inactiveTintColor: colors.MenuText,
+        },
     },
 );
 

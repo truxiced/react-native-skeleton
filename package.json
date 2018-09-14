@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android",
+    "lint": "tslint 'src/**/*.{ts,tsx}'",
+    "pretty": "prettier --config prettier.config.js --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.css\""
   },
   "dependencies": {
     "react": "16.4.1",
@@ -14,10 +17,21 @@
     "react-navigation": "2.0.1"
   },
   "devDependencies": {
+    "@types/react": "^16.4.14",
+    "@types/react-native": "^0.56.18",
+    "@types/react-native-elements": "^0.18.0",
+    "@types/react-navigation": "^2.0.20",
     "babel-jest": "23.4.0",
     "babel-preset-react-native": "^5",
     "jest": "23.4.0",
-    "react-test-renderer": "16.4.1"
+    "prettier": "^1.14.2",
+    "react-native-typescript-transformer": "^1.2.10",
+    "react-test-renderer": "16.4.1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.0.3"
   },
   "jest": {
     "preset": "react-native"

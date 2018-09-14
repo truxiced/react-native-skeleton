@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "*": ["src/*"]
+        },
+        "outDir": "./dist",
+        "target": "es5",
+        "sourceMap": true,
+        "jsx": "react",
+        "lib": ["dom", "es2017"]
+    },
+    "exclude": ["node_modules", "dist"],
+    "awesomeTypescriptLoaderOptions": {
+        "useCache": true,
+        "useBabel": false
+    }
+}

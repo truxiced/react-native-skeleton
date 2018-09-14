@@ -12,6 +12,7 @@ import Home from './HomeComponent';
 import Contact from './ContactComponent';
 import About from './AboutComponent';
 import { Icon } from 'react-native-elements';
+import { colors } from '../assets/colors';
 
 const MenuNavigator = createStackNavigator(
     {
@@ -34,7 +35,7 @@ const MenuNavigator = createStackNavigator(
         initialRouteName: 'Menu',
         navigationOptions: {
             headerStyle: {
-                backgroundColor: '#512DA8',
+                backgroundColor: colors.HeaderBar,
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -51,7 +52,7 @@ const HomeNavigator = createStackNavigator(
     {
         navigationOptions: ({ navigation }) => ({
             headerStyle: {
-                backgroundColor: '#512DA8',
+                backgroundColor: colors.HeaderBar,
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -76,7 +77,7 @@ const ContactNavigator = createStackNavigator(
     {
         navigationOptions: ({ navigation }) => ({
             headerStyle: {
-                backgroundColor: '#512DA8',
+                backgroundColor: colors.HeaderBar,
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -101,7 +102,7 @@ const AboutNavigator = createStackNavigator(
     {
         navigationOptions: ({ navigation }) => ({
             headerStyle: {
-                backgroundColor: '#512DA8',
+                backgroundColor: colors.HeaderBar,
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -124,10 +125,10 @@ const CustomDrawerContentComponent = (props) => (
         <SafeAreaView style={styles.container} forceInset={{ top: 'always', horizontal: 'never' }}>
             <View style={styles.drawerHeader}>
                 <View style={{ flex: 1 }}>
-                    <Image source={require('./images/logo.png')} style={styles.drawerImage} />
+                    <Image source={require('./images/skeleton.png')} style={styles.drawerImage} />
                 </View>
                 <View style={{ flex: 2 }}>
-                    <Text style={styles.drawerHeaderText}>Ristorant stuff and things</Text>
+                    <Text style={styles.drawerHeaderText}>Skeleton stuff and things</Text>
                 </View>
             </View>
             <DrawerItems {...props} />
@@ -146,6 +147,7 @@ const MainNavigator = createDrawerNavigator(
                     <Icon name="home" type="font-awesome" size={24} color={tintColor} />
                 ),
             },
+            
         },
         About: {
             screen: AboutNavigator,
@@ -179,8 +181,12 @@ const MainNavigator = createDrawerNavigator(
         },
     },
     {
-        drawerBackgroundColor: '#D1C4E9',
+
+        drawerBackgroundColor: colors.MenuBackground,
         contentComponent: CustomDrawerContentComponent,
+        contentOptions: {
+            inactiveTintColor: colors.MenuText
+        }
     },
 );
 
@@ -199,7 +205,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     drawerHeader: {
-        backgroundColor: '#512DA8',
+        backgroundColor: '#bbb',
         height: 140,
         alignItems: 'center',
         justifyContent: 'center',
@@ -207,7 +213,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     drawerHeaderText: {
-        color: 'white',
+        color: '#000000',
         fontSize: 24,
         fontWeight: 'bold',
     },
@@ -217,5 +223,3 @@ const styles = StyleSheet.create({
         height: 60,
     },
 });
-
-// export default Main;

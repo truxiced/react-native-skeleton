@@ -42,8 +42,8 @@ export default class Contact extends React.Component<{}, IContactState> {
         return (
             <ListItem
                 key={index}
-                title={item.item.name}
-                subtitle={item.item.description}
+                title={item.name}
+                subtitle={item.description}
                 // hideChevron={true}
                 // roundAvatar={true}
                 // avatar={require('./images/alberto.png')}

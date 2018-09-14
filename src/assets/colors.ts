@@ -1,6 +1,5 @@
-
 export enum colors {
     MenuBackground = '#000000',
     MenuText = '#ffffff',
-    HeaderBar = '#333333'
-} 
+    HeaderBar = '#333333',
+}

@@ -24,7 +24,15 @@ If the SDK was installed automatically as part of Android Studio then it's locat
 
 ```/Users/{YOUR_USER_NAME}/Library/Android/sdk```
 
-Once you know the location, open a terminal window and enter the following (changing out the path to the SDK to be however you installed it):
+
+### Update ~/.bash_profiles
+Once you know the location, choose your favorit editor and open ~/.bash_profies (Vim in my case)
+
+```
+vim ~/.bash_profies
+```
+
+Enter the following (changing out the path to the SDK to be however you installed it):
 
 ```
 export ANDROID_HOME={YOUR_PATH}
@@ -34,6 +42,8 @@ Once you have this set, you need to add this to the PATH environment variable:
 ```
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 ```
+
+### Update current terminal (Not needed when opening new terminals)
 Lastly apply these changes by re-sourcing .bash_profile:
 
 ```

@@ -1,13 +1,13 @@
 import * as React from 'react';
-import Contact from '../components/ContactComponent';
 import { createStackNavigator } from 'react-navigation';
+import { colors } from 'assets/colors';
 import { Icon } from 'react-native-elements';
-import { colors } from '../assets/colors';
+import { About } from 'app/pages';
 
-export function contactNavigator() {
+export function aboutNavigator() {
     return createStackNavigator(
         {
-            Contact: { screen: Contact },
+            Contact: { screen: About },
         },
         {
             navigationOptions: ({ navigation }) => ({

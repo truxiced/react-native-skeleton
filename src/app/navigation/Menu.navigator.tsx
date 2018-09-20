@@ -1,9 +1,8 @@
 import * as React from 'react';
-import Menu from '../components/MenuComponent';
-import DishDetail from '../components/DishdetailComponent';
+import { Dishes, Menu } from 'app/pages';
 import { createStackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
-import { colors } from '../assets/colors';
+import { colors } from 'assets/colors';
 
 export function menuNavigator() {
     return createStackNavigator(
@@ -21,7 +20,7 @@ export function menuNavigator() {
                     ),
                 }),
             },
-            DishDetail: { screen: DishDetail },
+            DishDetail: { screen: Dishes },
         },
         {
             initialRouteName: 'Menu',

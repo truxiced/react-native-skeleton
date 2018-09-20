@@ -1,13 +1,13 @@
 import * as React from 'react';
+import { Home } from 'app/pages';
 import { createStackNavigator } from 'react-navigation';
-import { colors } from '../assets/colors';
 import { Icon } from 'react-native-elements';
-import About from '../components/AboutComponent';
+import { colors } from 'assets/colors';
 
-export function aboutNavigator() {
+export function homeNavigator() {
     return createStackNavigator(
         {
-            Contact: { screen: About },
+            Home: { screen: Home },
         },
         {
             navigationOptions: ({ navigation }) => ({

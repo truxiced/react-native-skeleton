@@ -4,6 +4,8 @@ import { createDrawerNavigator, DrawerItems, SafeAreaView } from 'react-navigati
 import { Icon } from 'react-native-elements';
 import { colors } from '../assets/colors';
 import { aboutNavigator, menuNavigator, homeNavigator, contactNavigator } from './navigation';
+import RNLanguages from 'react-native-languages';
+import i18n from './i18n';
 
 const CustomDrawerContentComponent = (props) => (
     <ScrollView>
@@ -29,8 +31,8 @@ const MainNavigator = createDrawerNavigator(
         Home: {
             screen: homeNavigator(),
             navigationOptions: {
-                title: 'Home',
-                drawerLabel: 'Home',
+                title: i18n.t('sideMenu.home'),
+                drawerLabel: i18n.t('sideMenu.home'),
                 drawerIcon: ({ tintColor }) => (
                     <Icon name="home" type="font-awesome" size={24} color={tintColor} />
                 ),
@@ -39,8 +41,8 @@ const MainNavigator = createDrawerNavigator(
         About: {
             screen: aboutNavigator(),
             navigationOptions: {
-                title: 'About US',
-                drawerLabel: 'About US',
+                title: i18n.t('sideMenu.about'),
+                drawerLabel: i18n.t('sideMenu.about'),
                 drawerIcon: ({ tintColor }) => (
                     <Icon name="info-circle" type="font-awesome" size={24} color={tintColor} />
                 ),
@@ -49,8 +51,8 @@ const MainNavigator = createDrawerNavigator(
         Menu: {
             screen: menuNavigator(),
             navigationOptions: {
-                title: 'Menu',
-                drawerLabel: 'Menu',
+                title: i18n.t('sideMenu.menu'),
+                drawerLabel: i18n.t('sideMenu.menu'),
                 drawerIcon: ({ tintColor }) => (
                     <Icon name="list" type="font-awesome" size={24} color={tintColor} />
                 ),
@@ -59,8 +61,8 @@ const MainNavigator = createDrawerNavigator(
         Contact: {
             screen: contactNavigator(),
             navigationOptions: {
-                title: 'Contact US',
-                drawerLabel: 'Contact US',
+                title: i18n.t('sideMenu.contact'),
+                drawerLabel: i18n.t('sideMenu.contact'),
                 drawerIcon: ({ tintColor }) => (
                     <Icon name="address-card" type="font-awesome" size={22} color={tintColor} />
                 ),
@@ -77,6 +79,18 @@ const MainNavigator = createDrawerNavigator(
 );
 
 export default class MainComponent extends React.Component {
+    public componentWillMount() {
+        RNLanguages.addEventListener('change', this.onLanguagesChange);
+    }
+
+    public componentWillUnmount() {
+        RNLanguages.removeEventListener('change', this.onLanguagesChange);
+    }
+
+    private onLanguagesChange = ({ language }) => {
+        i18n.locale = language;
+    };
+
     public render() {
         return (
             <View style={{ flex: 1 }}>

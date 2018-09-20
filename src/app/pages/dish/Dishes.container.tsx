@@ -4,6 +4,7 @@ import { DISHES } from 'shared/dishes';
 import { COMMENTS } from 'shared/comments';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
 import { Comments, Dish } from './components';
+import i18n from 'app/i18n';
 
 interface IDishDetailsProps {
     navigation: NavigationScreenProp<NavigationState>;
@@ -16,7 +17,7 @@ interface IDishDetailsState {
 
 export class Dishes extends React.Component<IDishDetailsProps, IDishDetailsState> {
     public static navigationOptions = {
-        title: 'Dish Details',
+        title: i18n.t('dish.title'),
     };
 
     constructor(props) {

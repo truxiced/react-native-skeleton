@@ -3,6 +3,7 @@ import { FlatList } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import { DISHES } from 'shared/dishes';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
+import i18n from 'app/i18n';
 
 interface IMenuState {
     dishes: any;
@@ -14,7 +15,7 @@ interface IMenuProps {
 
 export class Menu extends React.Component<IMenuProps, IMenuState> {
     public static navigationOptions = {
-        title: 'Menu',
+        title: i18n.t('menu.title'),
     };
 
     constructor(props) {

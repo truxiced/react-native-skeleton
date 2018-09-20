@@ -1,0 +1,27 @@
+{
+    "home": {
+        "title": "Not Home"
+    },
+    "dish": {
+        "title": "Dish Details",
+        "comments": "Comments"
+    },
+    "menu": {
+        "title": "Menu"
+    },
+    "contact": {
+        "title": "Contact",
+        "information": "Contact Information"
+    },
+    "about": {
+        "title": "About",
+        "history": "Our History",
+        "leader": "Corporate Leadership"
+    },
+    "sideMenu": {
+        "home": "Home",
+        "menu": "Menu",
+        "about": "About Us",
+        "contact": "Contact Us"
+    }
+}

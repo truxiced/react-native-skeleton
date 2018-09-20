@@ -2,6 +2,7 @@ import * as React from 'react';
 import { View, Text, FlatList } from 'react-native';
 import { Card } from 'react-native-elements';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
+import i18n from 'app/i18n';
 
 interface ICommentsProps {
     comments: any;
@@ -23,7 +24,7 @@ export class Comments extends React.Component<ICommentsProps> {
         };
 
         return (
-            <Card title="Comments">
+            <Card title={i18n.t('dish.comments')}>
                 <FlatList
                     data={this.props.comments}
                     renderItem={renderCommentItem}

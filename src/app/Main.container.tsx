@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
 import { createDrawerNavigator, DrawerItems, SafeAreaView } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import { colors } from '../assets/colors';
-import { aboutNavigator, menuNavigator, homeNavigator, contactNavigator } from 'app/navigation';
+import { aboutNavigator, menuNavigator, homeNavigator, contactNavigator } from './navigation';
 
 const CustomDrawerContentComponent = (props) => (
     <ScrollView>
@@ -11,7 +11,7 @@ const CustomDrawerContentComponent = (props) => (
             <View style={styles.drawerHeader}>
                 <View style={{ flex: 1 }}>
                     <Image
-                        source={require('/app/assets/images/skeleton.png')}
+                        source={require('assets/images/skeleton.png')}
                         style={styles.drawerImage}
                     />
                 </View>

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { FlatList } from 'react-native';
 import { ListItem } from 'react-native-elements';
-import { DISHES } from '../shared/dishes';
+import { DISHES } from 'shared/dishes';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
 
 interface IMenuState {
@@ -11,7 +11,8 @@ interface IMenuState {
 interface IMenuProps {
     navigation: NavigationScreenProp<NavigationState>;
 }
-export default class Menu extends React.Component<IMenuProps, IMenuState> {
+
+export class Menu extends React.Component<IMenuProps, IMenuState> {
     public static navigationOptions = {
         title: 'Menu',
     };
@@ -31,7 +32,6 @@ export default class Menu extends React.Component<IMenuProps, IMenuState> {
                     title={item.name}
                     subtitle={item.description}
                     onPress={() => navigate('DishDetail', { dishId: item.id })}
-                    // avatar={require('./images/uthappizza.png')}
                 />
             );
         };

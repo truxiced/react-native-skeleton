@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { ScrollView, View, Text } from 'react-native';
 import { Card } from 'react-native-elements';
-import { DISHES } from '../shared/dishes';
-import { PROMOTIONS } from '../shared/promotions';
-import { LEADERS } from '../shared/leaders';
+import { DISHES } from 'shared/dishes';
+import { PROMOTIONS } from 'shared/promotions';
+import { LEADERS } from 'shared/leaders';
 
 interface IHomeState {
     dishes: any;
@@ -11,7 +11,7 @@ interface IHomeState {
     leaders: any;
 }
 
-export default class Home extends React.Component<{}, IHomeState> {
+export class Home extends React.Component<{}, IHomeState> {
     public static navigationOptions = {
         title: 'Home',
     };
@@ -43,7 +43,7 @@ export default class Home extends React.Component<{}, IHomeState> {
                 <Card
                     featuredTitle={item.name}
                     featuredSubtitle={item.designation}
-                    image={require('./images/uthappizza.png')}
+                    image={require('/app/assets/images/uthappizza.png')}
                 >
                     <Text style={{ margin: 10 }}>{item.description}</Text>
                 </Card>

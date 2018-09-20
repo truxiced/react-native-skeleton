@@ -1,9 +1,9 @@
 import * as React from 'react';
-import Main from './src/components/MainComponent';
+import Main from './src/app/Main.container';
 
 export default class HomeScreen extends React.Component {
 
-  render() {
+  public render() {
     return (
       <Main />
     );

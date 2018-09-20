@@ -17,4 +17,3 @@ steps:
     npm run pretty-ci &&
     npm run lint
   displayName: 'npm install and pretty'
-  

@@ -12,8 +12,8 @@ steps:
     versionSpec: '8.x'
   displayName: 'Install Node.js'
 
-- script: |
+- script: >
     npm install
-    npm run pretty-ci
+    npm run pretty-ci 
     npm run lint
   displayName: 'npm install and pretty'

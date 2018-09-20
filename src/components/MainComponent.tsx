@@ -95,10 +95,6 @@ const ContactNavigator = createStackNavigator(
     },
 );
 
-
-
-
-
 const AboutNavigator = createStackNavigator(
     {
         Contact: { screen: About },

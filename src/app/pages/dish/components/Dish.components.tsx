@@ -17,7 +17,7 @@ export class Dish extends React.Component<IDishProps> {
             return (
                 <Card
                     featuredTitle={this.props.dish.name}
-                    image={require('/app/assets/images/uthappizza.png')}
+                    image={require('assets/images/uthappizza.png')}
                 >
                     <Text style={{ margin: 10 }}>{this.props.dish.description}</Text>
                 </Card>

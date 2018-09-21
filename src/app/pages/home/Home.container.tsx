@@ -4,6 +4,7 @@ import { Card } from 'react-native-elements';
 import { DISHES } from 'shared/dishes';
 import { PROMOTIONS } from 'shared/promotions';
 import { LEADERS } from 'shared/leaders';
+import i18n from 'app/i18n';
 
 interface IHomeState {
     dishes: any;
@@ -13,7 +14,7 @@ interface IHomeState {
 
 export class Home extends React.Component<{}, IHomeState> {
     public static navigationOptions = {
-        title: 'Home',
+        title: i18n.t('home.title'),
     };
 
     constructor(props) {
@@ -43,7 +44,7 @@ export class Home extends React.Component<{}, IHomeState> {
                 <Card
                     featuredTitle={item.name}
                     featuredSubtitle={item.designation}
-                    image={require('/app/assets/images/uthappizza.png')}
+                    image={require('assets/images/uthappizza.png')}
                 >
                     <Text style={{ margin: 10 }}>{item.description}</Text>
                 </Card>

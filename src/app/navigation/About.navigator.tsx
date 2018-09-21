@@ -7,7 +7,7 @@ import { About } from 'app/pages';
 export function aboutNavigator() {
     return createStackNavigator(
         {
-            Contact: { screen: About },
+            About: { screen: About },
         },
         {
             navigationOptions: ({ navigation }) => ({

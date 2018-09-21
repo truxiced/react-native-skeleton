@@ -2,7 +2,7 @@ import * as React from 'react';
 import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
 import { createDrawerNavigator, DrawerItems, SafeAreaView } from 'react-navigation';
 import { Icon } from 'react-native-elements';
-import { colors } from '../assets/colors';
+import { colors } from 'assets/colors';
 import { aboutNavigator, menuNavigator, homeNavigator, contactNavigator } from './navigation';
 import RNLanguages from 'react-native-languages';
 import i18n from './i18n';
